@@ -23,26 +23,40 @@ def load_data(input=None):
     return prerequisites, df
 
 
-def output_data(input=None):
 
-    # Load excel data into pandas dataframe
-    #df = pd.read_excel('PA.xlsx')
-    df = pd.read_csv("PA_dummy_data.csv")
 
-    # Declare local cache and dataframe columns
-    
-    gpa = 3.2
-    pce = 1000
-    gre = "No"
-    
-    studentB = df.loc[df.GPA <= gpa][df.PCE_Hours <= pce][df.GRE == gre]
-    studentB.sort_values(
+
+def output_data(input, gpa, pce, gre):
+
+    prereq, df = load_data()
+
+
+    student = df.loc[df.GPA <= gpa][df.PCE_Hours <= pce][df.GRE == gre]
+    student.sort_values(
         by = "GPA",
         ascending = False
     )
-    studentB = studentB.sort_values(by='GPA', ascending=False)
 
-    print(studentB.Program)
+    program = student.Program.values
+    courses = student.Courses.values
+
+    output = []
+    final = []
+    
+    for i in range(len(courses)):
+        output.append(courses[i].replace(' ', '').split(','))
+    output = output[0]
+
+    for i in prereq:
+        if set(prereq[i]).issubset(set(input)):
+            if i in program:
+                final.append(i)
+
+    print(final)
+    
+              
+
+    
 
 
-output_data()
+output_data(['HumanAnatomy', 'HumanPhysiology', 'Biochemistry'], 3.4, 1000, 'No')
