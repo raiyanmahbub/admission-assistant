@@ -7,17 +7,30 @@ def load_data(input=None):
     df = pd.read_excel('PA.xlsx')
 
     # Declare local cache and dataframe columns
-    cache = dict()
+    prerequisites = dict()
+    metrics = dict()
+
     program = df['Program']
     courses = df['Courses']
 
+    metrics = dict()
+    
     try:
         for i in range(len(df)):
-            cache[program[i]] = courses[i].replace(' ', '').split(',')
+            prerequisites[program[i]] = courses[i].replace(' ', '').split(',')
     except:
         pass
 
-    print(cache)
+
+    try:
+        for i in range(len(df)):
+            metrics[program[i]] = {'GPA' : df['GPA'][i], 'PCE Hours' : df['PCE Hours'][i], 'GRE' : df['GRE'][i]}
+    except:
+        pass
+
+    return prerequisites, metrics
 
 
-load_data()
+a, b = load_data()
+print(a)
+print(b)
