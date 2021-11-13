@@ -7,7 +7,7 @@ Created on Sat Nov 13 15:12:55 2021
 import pandas as pd
 
 
-def load_data(input=None):
+def output_data(input=None):
 
     # Load excel data into pandas dataframe
     #df = pd.read_excel('PA.xlsx')
@@ -29,4 +29,4 @@ def load_data(input=None):
     print(studentB.Program)
 
 
-load_data()
+output_data()
