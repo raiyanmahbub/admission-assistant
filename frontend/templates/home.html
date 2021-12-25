@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Assistant</title>
+    
+</head>
+<body>
+    <h1>Admission Assistant</h1>
+
+    <form action="/data" method='POST'>
+        <label for="gpa">Enter GPA:</label>
+        <input type="text" id="gpa" name="gpa"><br><br>
+
+        <label for="pce">Enter PCE Hours:</label>
+        <input type="text" id="pce" name="pce"><br><br>
+
+        <label for="gre">Have you taken the GRE?</label>
+        <input type="checkbox" value="1" id="gre" name="gre"><br><br>
+
+        <div id="ck-button">
+            <label>
+               <input type="checkbox" value="1" name='humananatomy'><span>Human Anatomy</span>
+            </label>
+        </div>
+    
+        <div id="ck-button">
+            <label>
+               <input type="checkbox" value="1" name='microbiology'><span>Microbiology</span>
+            </label>
+        </div>
+    
+        <div id="ck-button">
+            <label>
+               <input type="checkbox" value="1" name='psychology'><span>Psychology</span>
+            </label>
+        </div>
+    
+        <div id="ck-button">
+            <label>
+               <input type="checkbox" value="1" name='biochemistry'><span>Biochemistry</span>
+            </label>
+        </div>
+    
+        <div id="ck-button">
+            <label>
+               <input type="checkbox" value="1" name='statistics'><span>Statistics</span>
+            </label>
+        </div>
+    
+        <div id="ck-button">
+            <label>
+               <input type="checkbox" value="1" name='medicalterminology'><span>Medical Terminology</span>
+            </label>
+        </div>
+    
+        <div id="ck-button">
+            <label>
+               <input type="checkbox" value="1" name='organicchemistry1'><span>Organic Chemistry I</span>
+            </label>
+        </div>
+    
+        <div id="ck-button">
+            <label>
+               <input type="checkbox" value="1" name='genetics'><span>Genetics</span>
+            </label>
+         </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    
+    <h2>Eligible Programs:</h2>   
+</body>
+</html>

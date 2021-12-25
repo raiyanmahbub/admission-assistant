@@ -23,6 +23,10 @@ def load_data(input=None):
     return prerequisites, df
 
 
+def clean_data(form_data):
+    pass
+
+
 
 
 
