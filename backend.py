@@ -24,7 +24,7 @@ def load_data(input=None):
 
 
 def clean_data(form_data):
-    pass
+    return form_data
 
 
 
