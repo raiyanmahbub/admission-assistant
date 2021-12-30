@@ -55,11 +55,20 @@ def output_data(input, gpa, pce, gre):
 
     prereq, df = load_data()
 
-    student = df.loc[
-        (df.GPA <= gpa) &
-        (df.PCE_Hours <= pce) &
-        (df.GRE == gre)
-    ]
+    if df.GRE == 'No':
+        student = df.loc[
+            (df.GPA <= gpa) &
+            (df.PCE_Hours <= pce)
+        ]
+    else:
+        student = df.loc[
+            (df.GPA <= gpa) &
+            (df.PCE_Hours <= pce)  &
+            (df.GRE == gre)
+        ]
+
+
+    print(student)
 
     student.sort_values(
         by = "GPA",
@@ -85,8 +94,6 @@ def output_data(input, gpa, pce, gre):
     
               
 
-    
-
 
 # output_data(['HumanAnatomy', 'HumanPhysiology', 'Biochemistry'], 3.4, 1000, 'No')
-# clean_data({'gpa': '3.4', 'pce': '1000', 'HumanAnatomy': '1', 'HumanPhysiology': '1', 'Biochemistry': '1'})
+clean_data({'gpa': '4.0', 'pce': '1000000', 'gre': 'Yes', 'HumanAnatomy': '1', 'HumanPhysiology': '1', 'Biochemistry': '1', 'Microbiology': '1', 'OrganicChemistryI': '1', 'Genetics': '1', 'Psychology': '1', 'Statistics': '1', 'MedicalTerminology': '1'})
