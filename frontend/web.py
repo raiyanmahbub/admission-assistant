@@ -4,9 +4,9 @@ app = Flask(__name__)
 import sys
 import os
 
-# SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-# sys.path.append(os.path.dirname(SCRIPT_DIR))
-from ..backend import clean_data
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(SCRIPT_DIR))
+from backend.data import clean_data
 
 
 
@@ -20,7 +20,7 @@ def data():
     if request.method == 'GET':
         return f"The URL /data is accessed directly. Try going to '/form' to submit form"
     if request.method == 'POST':
-        form_data = clean_data(request.form)
+        form_data = clean_data(request.form.to_dict())
 
 
         return render_template('data.html', data = form_data)
