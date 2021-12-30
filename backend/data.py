@@ -4,7 +4,7 @@ import pandas as pd
 def load_data(input=None):
 
     # Load excel data into pandas dataframe
-    df = pd.read_csv('backend/PA_dummy_data.csv')
+    df = pd.read_csv('PA_dummy_data.csv')
 
     # Declare local cache and dataframe columns
     prerequisites = dict()
@@ -45,7 +45,7 @@ def clean_data(form_data):
 
 
     final = output_data(prereq_list, gpa, pce, gre)
-    # print(final)
+    print(final)
 
     return final
 
@@ -55,18 +55,25 @@ def output_data(input, gpa, pce, gre):
 
     prereq, df = load_data()
 
-    if df.GRE == 'No':
-        student = df.loc[
-            (df.GPA <= gpa) &
-            (df.PCE_Hours <= pce)
-        ]
-    else:
-        student = df.loc[
-            (df.GPA <= gpa) &
-            (df.PCE_Hours <= pce)  &
-            (df.GRE == gre)
-        ]
+# =============================================================================
+#     if df.GRE == 'No':
+#         student = df.loc[
+#             (df.GPA <= gpa) &
+#             (df.PCE_Hours <= pce)
+#         ]
+#     else:
+#         student = df.loc[
+#             (df.GPA <= gpa) &
+#             (df.PCE_Hours <= pce)  &
+#             (df.GRE == gre)
+#         ]
+# =============================================================================
 
+    student = df.loc[
+        (df.GPA <= gpa) &
+        (df.PCE_Hours <= pce)  &
+        ((df.GRE == gre) | (df.GRE == 'Yes'))
+        ]
 
     print(student)
 
