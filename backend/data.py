@@ -103,4 +103,4 @@ def output_data(input, gpa, pce, gre):
 
 
 # output_data(['HumanAnatomy', 'HumanPhysiology', 'Biochemistry'], 3.4, 1000, 'No')
-clean_data({'gpa': '4.0', 'pce': '1000000', 'HumanAnatomy': '1', 'HumanPhysiology': '1', 'Biochemistry': '1', 'Microbiology': '1', 'OrganicChemistryI': '1', 'Genetics': '1', 'Psychology': '1', 'Statistics': '1', 'MedicalTerminology': '1'})
+# clean_data({'gpa': '4.0', 'pce': '1000000', 'HumanAnatomy': '1', 'HumanPhysiology': '1', 'Biochemistry': '1', 'Microbiology': '1', 'OrganicChemistryI': '1', 'Genetics': '1', 'Psychology': '1', 'Statistics': '1', 'MedicalTerminology': '1'})

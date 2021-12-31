@@ -12,7 +12,7 @@ from backend.data import clean_data
 
 @app.route('/', methods = ['POST', 'GET'])
 def index():
-    return render_template('home.html')
+    return render_template('index.html')
 
 
 @app.route('/data', methods = ['POST', 'GET'])
@@ -28,7 +28,7 @@ def data():
 
 @app.route('/test')
 def test():
-    # return render_template('signup-form-02/index.html')S
+    return render_template('home.html')
     pass
 
 
