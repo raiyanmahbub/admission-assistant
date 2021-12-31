@@ -26,6 +26,12 @@ def data():
         return render_template('data.html', data = form_data)
 
 
+@app.route('/test')
+def test():
+    # return render_template('signup-form-02/index.html')S
+    pass
+
+
 
 
 if __name__ == '__main__':
