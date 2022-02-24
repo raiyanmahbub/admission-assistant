@@ -45,7 +45,6 @@ def clean_data(form_data):
 
 
     final = output_data(prereq_list, gpa, pce, gre)
-    # print(final)
 
     return final
 
@@ -55,33 +54,25 @@ def output_data(input, gpa, pce, gre):
 
     prereq, df = load_data()
 
-# =============================================================================
-#     if df.GRE == 'No':
-#         student = df.loc[
-#             (df.GPA <= gpa) &
-#             (df.PCE_Hours <= pce)
-#         ]
-#     else:
-#         student = df.loc[
-#             (df.GPA <= gpa) &
-#             (df.PCE_Hours <= pce)  &
-#             (df.GRE == gre)
-#         ]
-# =============================================================================
-
-    student = df.loc[
-        (df.GPA <= gpa) &
-        (df.PCE_Hours <= pce)  &
-        ((df.GRE == gre))
+    # GPA, PCE, GRE FILTERING
+    if gre == 'Yes':
+        student = df.loc[
+            (df.GPA <= gpa) &
+            (df.PCE_Hours <= pce)
         ]
-
-    print(student)
+    else:
+        student = df.loc[
+            (df.GPA <= gpa) &
+            (df.PCE_Hours <= pce)  &
+            (df.GRE == gre)
+        ]
 
     student.sort_values(
         by = "GPA",
         ascending = False
     )
 
+    # COURSE FILTERING
     program = student.Program.values
     courses = student.Courses.values
 
@@ -97,10 +88,11 @@ def output_data(input, gpa, pce, gre):
             if i in program:
                 final.append(i)
 
+    # FINAL OUTPUT OF ELIGIBLE PROGRAMS
     return final
     
               
 
 
-# output_data(['HumanAnatomy', 'HumanPhysiology', 'Biochemistry'], 3.4, 1000, 'No')
+# output_data(['HumanAnatomy', 'HumanPhysiology', 'Biochemistry'], 13.4, 10000000, 'No')
 # clean_data({'gpa': '4.0', 'pce': '1000000', 'HumanAnatomy': '1', 'HumanPhysiology': '1', 'Biochemistry': '1', 'Microbiology': '1', 'OrganicChemistryI': '1', 'Genetics': '1', 'Psychology': '1', 'Statistics': '1', 'MedicalTerminology': '1'})
