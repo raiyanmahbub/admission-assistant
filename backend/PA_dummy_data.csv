@@ -1,17 +1,17 @@
 ﻿Program,Courses,GPA,PCE_Hours,GRE
-Augsburg University,"Human Physiology,Microbiology,Psychology,Biochemistry,Statistics,Medical Terminology",3,1,No
-Bethel University,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Genetics,Psychology,Statistics",3.2,250,No 
+Augsburg University,"Human Physiology,Microbiology,Psychology,Biochemistry,Statistics",3,1,No
+Bethel University,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Psychology,Statistics",3.2,250,No 
 Carroll University,"Human Anatomy,Human Physiology,Microbiology,",3.3,1000,No
-Concordia University - Wisconsin,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Genetics,Psychology,Statistics",3.5,100,No
-Des Moines University,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Medical Terminology",3,200,No
-Marquette University,"Human Anatomy,Human Physiology,Organic Chemistry I,Genetics,Psychology,Statistics",3.7,300,Yes
-Mayo Clinic College of Medicine,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Genetics,Psychology,Statistics",3.5,500,No
+Concordia University - Wisconsin,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Psychology,Statistics",3.5,100,No
+Des Moines University,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I",3,200,No
+Marquette University,"Human Anatomy,Human Physiology,Organic Chemistry I,Psychology,Statistics",3.7,300,Yes
+Mayo Clinic College of Medicine,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Psychology,Statistics",3.5,500,No
 Northwestern College,"Human Anatomy,Human Physiology,Biochemistry",3.2,1000,No
-St. Ambrose University,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Genetics,Psychology,Statistics",3.2,2000,Yes
+St. Ambrose University,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Psychology,Statistics",3.2,2000,Yes
 St. Catherine University,"Human Anatomy,Human Physiology",3.4,500,No
-St. Scholastica,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Genetics,Psychology,Statistics",3.5,400,Yes
-University of Iowa,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Genetics",3,750,Yes
-University of North Dakota,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Genetics,Psychology,Statistics",3,500,No
+St. Scholastica,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Psychology,Statistics",3.5,400,Yes
+University of Iowa,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I",3,750,Yes
+University of North Dakota,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Psychology,Statistics",3,500,No
 University of South Dakota,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Psychology,Statistics",3.4,1000,No
-University of Wisoncin - Lacrosse,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Genetics,Psychology,Statistics",3.2,2000,No
-University of Wisonsin - Madison,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Genetics,Psychology,Statistics",3.1,200,No
+University of Wisoncin - Lacrosse,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Psychology,Statistics",3.2,2000,No
+University of Wisonsin - Madison,"Human Anatomy,Human Physiology,Biochemistry,Organic Chemistry I,Psychology,Statistics",3.1,200,No
