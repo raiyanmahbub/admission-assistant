@@ -5,14 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admission Assistant</title>
+    <style>
+        div {
+        margin: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+        
+        ul {
+        list-style-type: none;
+        width: 2000px;
+        }
+        
+        h3 {
+        font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+        }
+        
+        li img {
+        float: left;
+        margin: 0 15px 0 0;
+        }
+        
+        li p {
+        font: 200 12px/1.5 Georgia, Times New Roman, serif;
+        }
+        
+        li {
+        padding: 10px;
+        overflow: auto;
+        }
+        
+        li:hover {
+        background: #eee;
+        }
+    </style>
     
 </head>
 <body>
     <h1>Admission Assistant</h1>
     
-    <h2>Eligible Programs:</h2>   
-    {% for key in data %}
-    <p>{{key}}</p>
+    <h2>Eligible Programs:</h2> 
+    
+    <ul>
+    {% for key, value in data.items() %}
+        <li>
+        <img src={{ value.Image }} />
+        <h3>{{ key }}</h3>
+        <h4>Location: {{ value.Location }}</h4>
+        </li>
     {% endfor %} 
+    </ul>
 </body>
 </html>

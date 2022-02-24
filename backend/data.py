@@ -1,3 +1,4 @@
+from unittest import result
 import pandas as pd
 
 
@@ -25,6 +26,10 @@ def load_data(input=None):
 
 
 def clean_data(form_data):
+
+    programs = {}
+    results = {}
+
     gpa = float(form_data['gpa'])
     pce = int(form_data['pce'])
     try:
@@ -46,7 +51,23 @@ def clean_data(form_data):
 
     final = output_data(prereq_list, gpa, pce, gre)
 
-    return final
+    programs = {'Augsburg University': {'Location': 'Minneapolis, MN', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='}, 
+                'Concordia University - Wisconsin': {'Location': 'Mequon, WI', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
+                'Des Moines University': {'Location': 'Des Moines, IA', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
+                'Mayo Clinic College of Medicine': {'Location': 'Rochester, MN', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
+                'Northwestern College': {'Location': 'Chicago, IL', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
+                'St. Catherine University': {'Location': 'Minneapolis, MN', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
+                'University of North Dakota': {'Location': 'Grand Forks, ND', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
+                'University of South Dakota': {'Location': 'Vermillion, SD', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
+                'University of Wisoncin - Lacrosse': {'Location': 'La Crosse, WI', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
+                'University of Wisonsin - Madison': {'Location': 'Madison, WI', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='}}
+    
+    for i in programs.keys():
+        if i in final:
+            results[i] = programs[i]
+
+    print(results)
+    return results
 
 
 
