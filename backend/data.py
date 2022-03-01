@@ -51,16 +51,16 @@ def clean_data(form_data):
 
     final = output_data(prereq_list, gpa, pce, gre)
 
-    programs = {'Augsburg University': {'Location': 'Minneapolis, MN', 'Strength': 'Strong', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4=', 'Length': '27 Months', 'Instate': '$87024', 'Outstate': '$87024'}, 
-                'Concordia University - Wisconsin': {'Location': 'Mequon, WI', 'Strength': 'Very Strong', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
-                'Des Moines University': {'Location': 'Des Moines, IA', 'Strength': 'Average', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
-                'Mayo Clinic College of Medicine': {'Location': 'Rochester, MN', 'Strength': 'Strong', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
-                'Northwestern College': {'Location': 'Chicago, IL', 'Strength': 'Strong', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
-                'St. Catherine University': {'Location': 'Minneapolis, MN', 'Strength': 'Very Strong', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
-                'University of North Dakota': {'Location': 'Grand Forks, ND', 'Strength': 'Average', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
-                'University of South Dakota': {'Location': 'Vermillion, SD', 'Strength': 'Very Strong', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
-                'University of Wisoncin - Lacrosse': {'Location': 'La Crosse, WI', 'Strength': 'Average', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='},
-                'University of Wisonsin - Madison': {'Location': 'Madison, WI', 'Strength': 'Strong', 'Image': 'https://media.istockphoto.com/photos/university-in-autumn-picture-id173598452?k=20&m=173598452&s=612x612&w=0&h=49b4CwEsyt_9zJGVeJDiYOMIYLiuy55yNlOMoj5lDq4='}}
+    programs = {'Augsburg University': {'Location': 'Minneapolis, MN', 'Strength': 'Strong', 'Image': '../static/styles/images/Augsburg.png', 'Length': '27 Months', 'Instate': '$87024', 'Outstate': '$87024'}, 
+                'Concordia University - Wisconsin': {'Location': 'Mequon, WI', 'Strength': 'Very Strong', 'Image': '../static/styles/images/Concordia.png'},
+                'Des Moines University': {'Location': 'Des Moines, IA', 'Strength': 'Average', 'Image': '../static/styles/images/DesMoines.png'},
+                'Mayo Clinic College of Medicine': {'Location': 'Rochester, MN', 'Strength': 'Strong', 'Image': '../static/styles/images/MayoClinic.png'},
+                'Northwestern College': {'Location': 'Chicago, IL', 'Strength': 'Strong', 'Image': '../static/styles/images/Northwestern.png'},
+                'St. Catherine University': {'Location': 'Minneapolis, MN', 'Strength': 'Very Strong', 'Image': '../static/styles/images/Catherine.png'},
+                'University of North Dakota': {'Location': 'Grand Forks, ND', 'Strength': 'Average', 'Image': '../static/styles/images/NorthDakota.png'},
+                'University of South Dakota': {'Location': 'Vermillion, SD', 'Strength': 'Very Strong', 'Image': '../static/styles/images/SouthDakota.png'},
+                'University of Wisoncin - Lacrosse': {'Location': 'La Crosse, WI', 'Strength': 'Average', 'Image': '../static/styles/images/LaCrosse.png'},
+                'University of Wisonsin - Madison': {'Location': 'Madison, WI', 'Strength': 'Strong', 'Image': '../static/styles/images/Madison.png'}}
     
     for i in programs.keys():
         if i in final:
